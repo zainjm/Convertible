@@ -30,9 +30,15 @@ class ImageConverterViewModel: ObservableObject {
         convertedImageData = selectedImages.compactMap { image in
             switch selectedFormat {
             case .jpeg:
-                return image.jpegData(compressionQuality: 0.9)
+                return image.jpegData(compressionQuality: 0.9) ?? Data()
             case .png:
-                return image.pngData()
+                return image.pngData() ?? Data()
+            case .tiff:
+                return image.tiffRepresentation() ?? Data()
+            case .heic:
+                return image.heicData() ?? Data()
+            case .pdf:
+                return image.convertToPDF() ?? Data()
             }
         }
     }

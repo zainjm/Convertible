@@ -9,13 +9,19 @@ import Foundation
 enum ImageFormat: String, CaseIterable, Identifiable {
     case jpeg = "JPEG"
     case png = "PNG"
-    
-    var id: String { rawValue }
-    
+    case tiff = "TIFF"
+    case heic = "HEIC"
+    case pdf = "PDF"
+
+    var id: String { self.rawValue }
+
     var fileExtension: String {
         switch self {
         case .jpeg: return "jpg"
         case .png: return "png"
+        case .tiff: return "tiff"
+        case .heic: return "heic"
+        case .pdf: return "pdf"
         }
     }
 }

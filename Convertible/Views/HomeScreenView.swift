@@ -30,7 +30,7 @@ struct HomeScreenView: View {
                     .multilineTextAlignment(.center)
                     .padding(.horizontal)
                 
-                NavigationLink(destination: MainScreenView()) {
+                NavigationLink(destination: MainTabView()) {
                     Text("Get Started")
                         .frame(maxWidth: .infinity)
                         .padding()

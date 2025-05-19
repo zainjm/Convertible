@@ -24,15 +24,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AC80B7FB2DDA1853002C6B71 /* ImageConverterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageConverterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC80B80D2DDA1854002C6B71 /* ImageConverterAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageConverterAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC80B8172DDA1854002C6B71 /* ImageConverterAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageConverterAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC80B7FB2DDA1853002C6B71 /* Convertible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Convertible.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC80B80D2DDA1854002C6B71 /* ConvertibleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvertibleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC80B8172DDA1854002C6B71 /* ConvertibleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvertibleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		AC80B7FD2DDA1853002C6B71 /* ImageConverterApp */ = {
+		AC80B7FD2DDA1853002C6B71 /* Convertible */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ImageConverterApp;
+			path = Convertible;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -65,7 +65,7 @@
 		AC80B7F22DDA1853002C6B71 = {
 			isa = PBXGroup;
 			children = (
-				AC80B7FD2DDA1853002C6B71 /* ImageConverterApp */,
+				AC80B7FD2DDA1853002C6B71 /* Convertible */,
 				AC80B7FC2DDA1853002C6B71 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,9 +73,9 @@
 		AC80B7FC2DDA1853002C6B71 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC80B7FB2DDA1853002C6B71 /* ImageConverterApp.app */,
-				AC80B80D2DDA1854002C6B71 /* ImageConverterAppTests.xctest */,
-				AC80B8172DDA1854002C6B71 /* ImageConverterAppUITests.xctest */,
+				AC80B7FB2DDA1853002C6B71 /* Convertible.app */,
+				AC80B80D2DDA1854002C6B71 /* ConvertibleTests.xctest */,
+				AC80B8172DDA1854002C6B71 /* ConvertibleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,9 +83,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AC80B7FA2DDA1853002C6B71 /* ImageConverterApp */ = {
+		AC80B7FA2DDA1853002C6B71 /* Convertible */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AC80B8212DDA1854002C6B71 /* Build configuration list for PBXNativeTarget "ImageConverterApp" */;
+			buildConfigurationList = AC80B8212DDA1854002C6B71 /* Build configuration list for PBXNativeTarget "Convertible" */;
 			buildPhases = (
 				AC80B7F72DDA1853002C6B71 /* Sources */,
 				AC80B7F82DDA1853002C6B71 /* Frameworks */,
@@ -96,18 +96,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				AC80B7FD2DDA1853002C6B71 /* ImageConverterApp */,
+				AC80B7FD2DDA1853002C6B71 /* Convertible */,
 			);
-			name = ImageConverterApp;
+			name = Convertible;
 			packageProductDependencies = (
 			);
 			productName = ImageConverterApp;
-			productReference = AC80B7FB2DDA1853002C6B71 /* ImageConverterApp.app */;
+			productReference = AC80B7FB2DDA1853002C6B71 /* Convertible.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AC80B80C2DDA1854002C6B71 /* ImageConverterAppTests */ = {
+		AC80B80C2DDA1854002C6B71 /* ConvertibleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AC80B8242DDA1854002C6B71 /* Build configuration list for PBXNativeTarget "ImageConverterAppTests" */;
+			buildConfigurationList = AC80B8242DDA1854002C6B71 /* Build configuration list for PBXNativeTarget "ConvertibleTests" */;
 			buildPhases = (
 				AC80B8092DDA1854002C6B71 /* Sources */,
 				AC80B80A2DDA1854002C6B71 /* Frameworks */,
@@ -118,16 +118,16 @@
 			dependencies = (
 				AC80B80F2DDA1854002C6B71 /* PBXTargetDependency */,
 			);
-			name = ImageConverterAppTests;
+			name = ConvertibleTests;
 			packageProductDependencies = (
 			);
 			productName = ImageConverterAppTests;
-			productReference = AC80B80D2DDA1854002C6B71 /* ImageConverterAppTests.xctest */;
+			productReference = AC80B80D2DDA1854002C6B71 /* ConvertibleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AC80B8162DDA1854002C6B71 /* ImageConverterAppUITests */ = {
+		AC80B8162DDA1854002C6B71 /* ConvertibleUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AC80B8272DDA1854002C6B71 /* Build configuration list for PBXNativeTarget "ImageConverterAppUITests" */;
+			buildConfigurationList = AC80B8272DDA1854002C6B71 /* Build configuration list for PBXNativeTarget "ConvertibleUITests" */;
 			buildPhases = (
 				AC80B8132DDA1854002C6B71 /* Sources */,
 				AC80B8142DDA1854002C6B71 /* Frameworks */,
@@ -138,11 +138,11 @@
 			dependencies = (
 				AC80B8192DDA1854002C6B71 /* PBXTargetDependency */,
 			);
-			name = ImageConverterAppUITests;
+			name = ConvertibleUITests;
 			packageProductDependencies = (
 			);
 			productName = ImageConverterAppUITests;
-			productReference = AC80B8172DDA1854002C6B71 /* ImageConverterAppUITests.xctest */;
+			productReference = AC80B8172DDA1854002C6B71 /* ConvertibleUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -168,7 +168,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AC80B7F62DDA1853002C6B71 /* Build configuration list for PBXProject "ImageConverterApp" */;
+			buildConfigurationList = AC80B7F62DDA1853002C6B71 /* Build configuration list for PBXProject "Convertible" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -184,9 +184,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AC80B7FA2DDA1853002C6B71 /* ImageConverterApp */,
-				AC80B80C2DDA1854002C6B71 /* ImageConverterAppTests */,
-				AC80B8162DDA1854002C6B71 /* ImageConverterAppUITests */,
+				AC80B7FA2DDA1853002C6B71 /* Convertible */,
+				AC80B80C2DDA1854002C6B71 /* ConvertibleTests */,
+				AC80B8162DDA1854002C6B71 /* ConvertibleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -242,12 +242,12 @@
 /* Begin PBXTargetDependency section */
 		AC80B80F2DDA1854002C6B71 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AC80B7FA2DDA1853002C6B71 /* ImageConverterApp */;
+			target = AC80B7FA2DDA1853002C6B71 /* Convertible */;
 			targetProxy = AC80B80E2DDA1854002C6B71 /* PBXContainerItemProxy */;
 		};
 		AC80B8192DDA1854002C6B71 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AC80B7FA2DDA1853002C6B71 /* ImageConverterApp */;
+			target = AC80B7FA2DDA1853002C6B71 /* Convertible */;
 			targetProxy = AC80B8182DDA1854002C6B71 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -379,7 +379,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ImageConverterApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Convertible/Preview Content\"";
 				DEVELOPMENT_TEAM = 9ZNNV4J993;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -408,7 +408,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ImageConverterApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Convertible/Preview Content\"";
 				DEVELOPMENT_TEAM = 9ZNNV4J993;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -445,7 +445,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageConverterApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ImageConverterApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Convertible.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Convertible";
 			};
 			name = Debug;
 		};
@@ -464,7 +464,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageConverterApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ImageConverterApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Convertible.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Convertible";
 			};
 			name = Release;
 		};
@@ -505,7 +505,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AC80B7F62DDA1853002C6B71 /* Build configuration list for PBXProject "ImageConverterApp" */ = {
+		AC80B7F62DDA1853002C6B71 /* Build configuration list for PBXProject "Convertible" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC80B81F2DDA1854002C6B71 /* Debug */,
@@ -514,7 +514,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC80B8212DDA1854002C6B71 /* Build configuration list for PBXNativeTarget "ImageConverterApp" */ = {
+		AC80B8212DDA1854002C6B71 /* Build configuration list for PBXNativeTarget "Convertible" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC80B8222DDA1854002C6B71 /* Debug */,
@@ -523,7 +523,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC80B8242DDA1854002C6B71 /* Build configuration list for PBXNativeTarget "ImageConverterAppTests" */ = {
+		AC80B8242DDA1854002C6B71 /* Build configuration list for PBXNativeTarget "ConvertibleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC80B8252DDA1854002C6B71 /* Debug */,
@@ -532,7 +532,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC80B8272DDA1854002C6B71 /* Build configuration list for PBXNativeTarget "ImageConverterAppUITests" */ = {
+		AC80B8272DDA1854002C6B71 /* Build configuration list for PBXNativeTarget "ConvertibleUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC80B8282DDA1854002C6B71 /* Debug */,

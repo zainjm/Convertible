@@ -18,17 +18,17 @@ struct MainScreenView: View {
                 Color(hex: "#f0dfe6")
                     .ignoresSafeArea()
                 VStack(spacing: 24) {
-                    Spacer()
                     Text("Convert Your Image")
                         .font(.title.bold())
                         .foregroundColor(Color(hex: "#913d63"))
-                        .padding(.top, 0)
+                        .padding(.top, 48)
                     PhotosPicker(
                         "Select Images",
                         selection: $viewModel.selectedItems,
                         maxSelectionCount: 10,
                         matching: .images
                     )
+                    .foregroundColor(Color(hex: "#913d63"))
                     .onChange(of: viewModel.selectedItems) { _ in
                         Task {
                             await viewModel.loadSelectedImages()
@@ -69,6 +69,7 @@ struct MainScreenView: View {
                         viewModel.shareConvertedImages()
                     }
                     .frame(maxWidth: .infinity)
+                    .frame(height: 44)
                     .padding(0.0)
                     .background($viewModel.selectedImages.isEmpty ? Color.gray.opacity(0.4) : Color(hex: "#913d63"))
                     .foregroundColor(.white)
@@ -79,7 +80,7 @@ struct MainScreenView: View {
                 }
                 .padding()
             }
-        }
+        } .tint(Color(hex: "#913d43"))
     }
 }
 
