@@ -65,17 +65,16 @@ struct MainScreenView: View {
                     .padding(.horizontal)
                     
                     Button("Convert & Share") {
-                        $viewModel.convertImage()
-                        $viewModel.shareConvertedImage()
+                        viewModel.convertAllImages()
+                        viewModel.shareConvertedImages()
                     }
                     .frame(maxWidth: .infinity)
-                    .padding()
-                    .background($viewModel.selectedImage == nil ? Color.gray.opacity(0.4) : Color(hex: "#913d63"))
+                    .padding(0.0)
+                    .background($viewModel.selectedImages.isEmpty ? Color.gray.opacity(0.4) : Color(hex: "#913d63"))
                     .foregroundColor(.white)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
                     .padding(.horizontal)
-                    .disabled($viewModel.selectedImage == nil)
-                    
+                    .disabled($viewModel.selectedImages.isEmpty)
                     Spacer()
                 }
                 .padding()
