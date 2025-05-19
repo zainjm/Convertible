@@ -81,6 +81,7 @@ struct MainScreenView: View {
                 .padding()
             }
         } .tint(Color(hex: "#913d43"))
+        
     }
 }
 
