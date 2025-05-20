@@ -11,6 +11,7 @@ import _PhotosUI_SwiftUI
 
 struct MainScreenView: View {
     @StateObject private var viewModel = ImageConverterViewModel()
+    @State private var showResults = false
     
     var body: some View {
         NavigationStack {
@@ -63,10 +64,20 @@ struct MainScreenView: View {
                     }
                     .pickerStyle(.segmented)
                     .padding(.horizontal)
-                    
-                    Button("Convert & Share") {
+                    if viewModel.selectedFormat == .jpeg || viewModel.selectedFormat == .heic {
+                        VStack(alignment: .leading) {
+                            Text("Compression Quality: \(Int(viewModel.compressionQuality * 100))%")
+                                .font(.headline)
+                                .foregroundColor(Color(hex: "#913d63"))
+                            
+                            Slider(value: $viewModel.compressionQuality, in: 0.1...1.0, step: 0.05)
+                                .accentColor(Color(hex: "#913d63"))
+                        }
+                        .padding(.horizontal)
+                    }
+                    Button("Convert") {
                         viewModel.convertAllImages()
-                        viewModel.shareConvertedImages()
+                        showResults = true
                     }
                     .frame(maxWidth: .infinity)
                     .frame(height: 44)
@@ -77,8 +88,18 @@ struct MainScreenView: View {
                     .padding(.horizontal)
                     .disabled($viewModel.selectedImages.isEmpty)
                     Spacer()
+                }.padding()
+                NavigationLink(
+                    destination: ResultsScreenView(
+                        convertedData: viewModel.convertedImageData,
+                        format: viewModel.selectedFormat
+                    ),
+                    isActive: $showResults
+                ) {
+                    EmptyView()
                 }
-                .padding()
+                .hidden()
+                
             }
         } .tint(Color(hex: "#913d43"))
     }

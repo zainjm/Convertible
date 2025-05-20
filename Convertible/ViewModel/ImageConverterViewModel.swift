@@ -15,7 +15,8 @@ class ImageConverterViewModel: ObservableObject {
     @Published var selectedImages: [UIImage] = []
     @Published var selectedFormat: ImageFormat = .jpeg
     @Published var convertedImageData: [Data] = []
-
+    @Published var compressionQuality: Double = 0.9
+    
     func loadSelectedImages() async {
         selectedImages = []
         for item in selectedItems {
@@ -30,15 +31,15 @@ class ImageConverterViewModel: ObservableObject {
         convertedImageData = selectedImages.compactMap { image in
             switch selectedFormat {
             case .jpeg:
-                return image.jpegData(compressionQuality: 0.9) ?? Data()
+                return image.jpegData(compressionQuality: compressionQuality)
             case .png:
-                return image.pngData() ?? Data()
+                return image.pngData()
             case .tiff:
-                return image.tiffRepresentation() ?? Data()
+                return image.tiffRepresentation()
             case .heic:
-                return image.heicData() ?? Data()
+                return image.heicData(quality: compressionQuality)
             case .pdf:
-                return image.convertToPDF() ?? Data()
+                return image.convertToPDF()
             }
         }
     }

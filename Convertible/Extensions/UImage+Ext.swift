@@ -12,13 +12,21 @@ import ImageIO
 import MobileCoreServices
 
 extension UIImage {
-    func heicData() -> Data? {
+    func heicData(quality: Double = 0.9) -> Data? {
         let data = NSMutableData()
-        guard let destination = CGImageDestinationCreateWithData(data, AVFileType.heic as CFString, 1, nil),
-              let cgImage = self.cgImage else { return nil }
+        guard let cgImage = self.cgImage else { return nil }
+        
+        let options: [CFString: Any] = [
+            kCGImageDestinationLossyCompressionQuality: quality
+        ]
+        
+        guard let destination = CGImageDestinationCreateWithData(data, AVFileType.heic as CFString, 1, nil) else {
+            return nil
+        }
 
-        CGImageDestinationAddImage(destination, cgImage, nil)
+        CGImageDestinationAddImage(destination, cgImage, options as CFDictionary)
         guard CGImageDestinationFinalize(destination) else { return nil }
+        
         return data as Data
     }
 
