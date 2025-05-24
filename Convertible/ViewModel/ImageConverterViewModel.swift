@@ -16,13 +16,16 @@ class ImageConverterViewModel: ObservableObject {
     @Published var selectedFormat: ImageFormat = .jpeg
     @Published var convertedImageData: [Data] = []
     @Published var compressionQuality: Double = 0.9
+    @Published var displayableImages: [DisplayableImage] = []
     
     func loadSelectedImages() async {
         selectedImages = []
+        displayableImages = []
         for item in selectedItems {
             if let data = try? await item.loadTransferable(type: Data.self),
                let image = UIImage(data: data) {
                 selectedImages.append(image)
+                displayableImages.append(DisplayableImage(image: image))
             }
         }
     }

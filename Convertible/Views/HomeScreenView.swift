@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct HomeScreenView: View {
+    @StateObject private var iapManager = IAPManager.shared
     var body: some View {
         NavigationStack {
             VStack(spacing: 32) {
@@ -19,7 +20,15 @@ struct HomeScreenView: View {
                         .scaledToFit()
                         .frame(width: 100, height: 100)
                         .shadow(radius: 5)
-                    
+                    if iapManager.hasPro {
+                        Text("Pro Account")
+                            .font(.caption.bold())
+                            .padding(.horizontal, 12)
+                            .padding(.vertical, 4)
+                            .background(Color(hex: "#913d63"))
+                            .foregroundColor(.white)
+                            .clipShape(Capsule())
+                    }
                     Text("Convertible")
                         .font(.largeTitle.bold())
                         .foregroundColor(.primary)

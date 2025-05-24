@@ -7,9 +7,14 @@
 
 import SwiftUI
 import SwiftData
+import Firebase
 
 @main
 struct ConvertibleApp: App {
+    init() {
+        
+    }
+
     var body: some Scene {
         WindowGroup {
             HomeScreenView()
